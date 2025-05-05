@@ -1,28 +1,24 @@
 #include <iostream>
 using namespace std;
 
-class mahasiswa
-{
-public:
-    int nim;
-    void showNim()
-    {
-        cout << "No Induk = " << nim << endl;
-    }
-};
-
 int main()
 {
-    mahasiswa mhs; // Object mhs
-    mhs.nim = 2024;
-    mhs.showNim(); // Member Access Operator
+    // dereference
+    int a = 10;
+    int b = 6;
+    int y = 20;
+    int *c = &a;
+    cout << "alamat memori : " << c << endl;
+    cout << "Nilai dari C : " << *c << endl;
+    c = &y;
+    cout << "Alamat memori : " << c << endl;
+    cout << "Nilai dari c : " << *c << endl;
 
-    mahasiswa &refMhs = mhs; // Pointer Reference reMhs
-    refMhs.nim = 2;
-    mhs.showNim();
+    // reference
+    int &d = b;
+    cout << "Nilai " << d << endl;
+    cout << "refence " << &d << endl;
 
-    mahasiswa *pMhs = &mhs; // pointer Deference pMhs
-    pMhs->nim = 3;
-    pMhs->showNim();
-    return 0;
+    int f = 5;
+    int g = f;
 }
